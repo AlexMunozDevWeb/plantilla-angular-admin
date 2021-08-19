@@ -1,0 +1,16 @@
+.card-columns {
+    column-count: 4;
+}
+@media screen and (max-width:728px){
+    .card-columns {
+        column-count: 2;
+    }
+}
+@media screen and (max-width:420px){
+    .card-columns {
+        column-count: 1;
+    }
+}
+/* .card{
+    min-height: auto;
+} */

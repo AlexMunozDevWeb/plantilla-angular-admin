@@ -1,0 +1,35 @@
+
+
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="r-panel-body">
+
+            <h4>Adivina el número</h4>
+            <p>Se ha generado un numero aleatorio entre 1 y 100. Tienes hasta 10 intentos para adivinarlo. Cada vez que introduzcas un numero sabras si es mayor o menor.</p>
+
+            <form (ngSubmit)="probar_numero( forma )" #forma="ngForm">
+                <div class="form-group">
+                    <label>Adivina el numero</label>
+                    <input type="number" class="form-control guessField" id="numero" name="guess_number" [class.is-invalid]="false" ngModel required>
+                </div>
+                <button type="submit" class="btn btn-primary guessSubmit">Probar número</button>
+            </form>
+            
+            <div class="resultados">
+                <p class="intentos mt-3"></p>
+                <p class="ultimo-resultado"></p>
+                <p class="mayor-o-menor"></p>
+            </div>
+
+            <button class="btn btn-primary d-none reiniciar_juego" (click)="resetGame()">Reiniciar juego</button>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
